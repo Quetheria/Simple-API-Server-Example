@@ -1,27 +1,21 @@
 <!DOCTYPE HTML>
-
 <html>
-	<head>
-		<title>Flask Template</title>
-    <style>
-      form {
-        margin: 0 auto;
-        max-width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      input {
-        font-size: 28px;
-        margin-top: 20px;
-      }
-    </style>
-	</head>
-	<body>
-		<form action="/user">
-			<input type="text" placeholder="username" name="username"></input>
-			<input type="submit" value="go to your page"></input>
-		</form>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelver.net.npm/bulma@0.9.1/css/bulma.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+</head>
+<style>
+  .title {
+    font-family:Garamond, Georgia,serif;
+  }
+</style>
+<body>
+  <section class="section content">
+    <h1> Hello </h1>
+    <p> sfasdf<p>
+  </section>
+</body>
 </html>
