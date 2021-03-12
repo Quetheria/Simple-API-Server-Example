@@ -3,28 +3,36 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdn.jsdelver.net.npm/bulma@0.9.1/css/bulma.min.css">
-	<link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+  <title>Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='bulma.min.css')}}"> 
 </head>
 <body>
-  <section class="section content">
-    <h1> Title </h1>
-  </section>
-  <div class="card">
-      <div class="card-content" $card-radius=1>
-        Text here
-      </div>
-  </div>
-  <form class="box">
-    <div class="field">
-      <label class="label">Text</label>
-      <div class="control">
-        <input class="input" type="text" placeholder="Enter text here">
-      </div>
+    <section class="section content">
+      <h1> Chat </h1>
+    </section>
+    <div class="columns">
+        <div class="column">
+          Text here
+        </div>
+        <div class="column">
+          <div class ="card">
+            <div class="card content">
+              
+            </div>
+          </div>
+          <form class="box">
+            <div class="field">
+              <label class="label">Text</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Enter text here">
+              </div>
+            </div>
+            <button class ="button is-primary">Enter</button>
+          </form>
+        </div>
     </div>
-    <button class ="button is-primary">Enter</button>
-  </form>
+
 
 </body>
 </html>
