@@ -12,15 +12,15 @@
     <section class="section content">
       <h1> Login </h1>
     </section>
-    <form class="box">
+    <form action="http://localhost:8080/api/v1.0/send"class="box" method="GET">
       <div class="field">
         <label class="label">Username</label>
-        <div action="??"method="GET"class="control">
-          <input class="input" type="text" placeholder="username">
+        <div class="control">
+          <input id="username" name="username"class="input" type="text" placeholder="username">
         </div>
       </div>
-      <button class ="button is-primary">Submit</button>
-      <a href='/index'>Login</a>
+      <button type="submit" class  ="button is-primary">Submit</button>
+      
     </form>
 
   </body> 

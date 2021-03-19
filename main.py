@@ -12,6 +12,6 @@ def index():
 
 @web_site.route("/api/v1.0/send")
 def send_test():
-
+	return "text"+username"
 
 web_site.run(host='0.0.0.0', port=8080)	
