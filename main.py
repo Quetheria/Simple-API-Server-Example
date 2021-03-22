@@ -10,8 +10,9 @@ def login():
 def index():
 	return render_template('index.html')
 
-@web_site.route("/api/v1.0/send")
+@web_site.route("/api/v1.0/send",methods=["POST"])	
 def send_test():
-	return "text"+username"
+	username=request.form["username"]
+	return "<h1>text, "+ username+ "!<h1>"
 
 web_site.run(host='0.0.0.0', port=8080)	
