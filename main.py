@@ -1,7 +1,8 @@
 from flask import Flask, jsonify, request,render_template
 
 web_site = Flask(__name__)
-usernames=[]	
+usernames=[]
+messages=[]	
 @web_site.route("/")
 def login():
 	return render_template('login.html')
@@ -15,7 +16,9 @@ def send_test():
 @web_site.route('/index',methods=["POST"])
 def index():
 	names=request.form["username"]
+	message=request.form["text"]
 	usernames.append(names)
+	text.append(message)
 	return render_template('index.html',names=usernames)
 
 
