@@ -2,7 +2,9 @@ from flask import Flask, jsonify, request,render_template
 
 web_site = Flask(__name__)
 usernames=[]
-messages=[]	
+messages=[
+	"hello"
+]	
 @web_site.route("/")
 def login():
 	return render_template('login.html')
@@ -15,10 +17,16 @@ def send_test():
 
 @web_site.route('/index',methods=["POST"])
 def index():
+
 	names=request.form["username"]
 	usernames.append(names)
-	return render_template('index.html',names=usernames)
 
+	return render_template('index.html',names=usernames, texts=messages)
+@web_site.route("/send", methods=["POST"])
+def send():
+	texts=request.form["text"]
+	messages.append(texts)
+	return render_template("index.html",names=usernames, texts=messages)
 
 
 web_site.run(host='0.0.0.0', port=8080)

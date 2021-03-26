@@ -14,14 +14,14 @@
       </section>
       <div class="columns">
           <div class="column">
-            {%for name in names)%}
+            {%for name in names%}
             <div class ="card">
               {{name}}
             </div>
             {%endfor%}
           </div>
           <div class="column">
-            {%for text in text%}
+            {%for text in texts%}
             <div class ="card">
               <div class="card-content" $card-radius=10>
                 {{text}}
@@ -29,7 +29,7 @@
               </div>
             </div>
             {%endfor%}
-            <form class="box" method ="POST">
+            <form class="box" action="http://localhost:8080/send" method ="POST">
               <div class="field">
                 <label class="label">Text</label>
                 <div class="control">
