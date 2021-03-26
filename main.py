@@ -16,11 +16,9 @@ def send_test():
 @web_site.route('/index',methods=["POST"])
 def index():
 	names=request.form["username"]
-	message=request.form["text"]
 	usernames.append(names)
-	text.append(message)
 	return render_template('index.html',names=usernames)
 
 
 
-web_site.run(host='0.0.0.0', port=8080)	
+web_site.run(host='0.0.0.0', port=8080)
